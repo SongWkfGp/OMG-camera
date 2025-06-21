@@ -83,7 +83,8 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Update total
         const total = calculateCartTotal();
-        cartTotalElement.textContent = $${total.toFixed(2)};
+       cartTotalElement.textContent = `$${total.toFixed(2)}`;
+
     }
     
     // Update both cart count and display
@@ -91,6 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
         updateCartCount();
         displayCartItems();
     }
+    
     
     // Add to cart functionality
     document.querySelectorAll('.add-to-cart').forEach(button => {
@@ -117,7 +119,8 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             updateCart();
-            showNotification(${productName} added.to.cart!);
+            showNotification(`${productName} added to cart!`);
+
         });
     });
     
@@ -157,3 +160,4 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize cart
     updateCartCount();
 });
+ 
